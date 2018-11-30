@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- 基本信息 -->
+	<description>tnms</description>
+	<modelVersion>4.0.0</modelVersion>
+	<name>tnms</name>
+	<packaging>pom</packaging>
+
+	<!-- 项目说明：这里作为聚合工程的父工程 -->
+	<groupId>com.ycnet</groupId>
+	<artifactId>tnms</artifactId>
+	<version>1.0.0.RELEASE</version>
+
+	<!-- 继承说明：这里继承SpringBoot提供的父工程 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.7.RELEASE</version>
+		<relativePath/>
+	</parent>
+
+	<!-- 模块说明：这里声明多个子模块 -->
+	<modules>
+		<module>tnms-site</module>
+		<module>tnms-core</module>
+		<module>mobile-core</module>
+		<module>opss-site</module>
+	</modules>
+
+	<!-- 版本说明：这里统一管理依赖的版本号 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.ycnet</groupId>
+				<artifactId>tnms-site</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ycnet</groupId>
+				<artifactId>tnms-core</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ycnet</groupId>
+				<artifactId>mobile-core</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ycnet</groupId>
+				<artifactId>opss-site</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
